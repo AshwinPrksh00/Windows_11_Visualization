@@ -7,4 +7,4 @@ A Windows 11 visualization created with HTML, CSS and Javascript in collaboratio
 -Dynamic Widgets<br>
 
 ## Deployment
-<a href="https://ashwinprksh00.github.io/Windows_11_Visualization/">Click here</a> to see the deployed page 
+<a href="https://ashwinprksh00.github.io/Windows_11_Visualization/">Click here</a> to see the deployed page (Recommended to see the page in Mozilla Firefox for full effect)
