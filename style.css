@@ -1,0 +1,552 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image: url('bg.jpeg'); 
+    background-size: cover; */
+    overflow: hidden;
+    height: 100vh;
+}
+.timedate{
+    background-color: #f3f3f3;
+    position: fixed;
+    width: 60px;
+    align-items: center;
+    text-align: center;
+    right: 3%;
+    bottom: 1px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    font-weight: 200;
+    font-size: 12.5px;
+    
+}
+
+.taskbar{
+    background-color: #f3f3f3;
+    width: 100%;
+    position: fixed;
+    align-items: center;
+    bottom: 0;
+    text-align: center;
+    /*display: flex;*/
+    z-index: 50;
+    justify-content: center;
+}
+
+.startmenu{
+    position: absolute; 
+    /* bottom: 50px; */
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.5s ease-in; 
+}
+
+
+.windowbut{
+    position:absolute;
+    background: transparent;
+    bottom: 13px;
+    width: 30px;
+    height: 30px;
+    left: 38.6%;
+    outline: none;
+}
+
+.starttag, .searchtag, .displaytag, .widgettag, .edgetag, .vscodetag{
+  /* display: none; */
+  position: absolute;
+  bottom: 55px;
+  left: 37.6%;
+  padding: 0px 4px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: smaller;
+  background-origin: border-box;
+  transition: opacity 0.05s linear;
+  box-shadow: 2px 2px 1px 0px rgb(36, 33, 33);
+  opacity:0;
+}
+.windowbut:hover ~ .starttag, .searchbut:hover ~ .searchtag, .screenbut:hover ~ .displaytag, .trans:hover ~ .widgettag, .edgebut:hover ~ .edgetag, .vsbut:hover ~ .vscodetag{
+  
+  background: rgb(255, 255, 255);
+  color:rgba(71, 70, 70, 0.884);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+}
+
+.searchbut{
+    position:absolute;
+    background: transparent;
+    bottom: 13px;
+    width: 30px;
+    height: 30px;
+    left: 41.5%;
+}
+.searchtag{
+  left: 39.6%;
+}
+
+.screenbut{
+    position:absolute;
+    background: transparent;
+    bottom: 13px;
+    width: 30px;
+    height: 30px;
+    left: 44.3%;;
+}
+
+.displaytag{
+  left: 41.6%;
+}
+/* .screenbut:hover ~ .displaytag{
+  
+  background: rgb(255, 255, 255);
+  color:rgba(71, 70, 70, 0.884);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+} */
+
+.trans{
+    position: absolute;
+    background: transparent;
+    bottom: 13px;
+    width: 30px;
+    height: 30px;
+    left: 47.25%;
+}
+
+.widgettag{
+  left: 45.6%;
+}
+/* .trans:hover ~ .widgettag{
+  
+  background: rgb(255, 255, 255);
+  color:rgba(71, 70, 70, 0.884);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+} */
+
+.vsbut{
+    position: absolute;
+    background: transparent;
+    bottom: 10px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    left: 52.9%;
+}
+
+.vscodetag{
+  left: 49.6%;
+}
+/* .vsbut:hover ~ .vscodetag{
+  
+  background: rgb(255, 255, 255);
+  color:rgba(71, 70, 70, 0.884);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+} */
+
+.edgebut{
+    position: absolute;
+    position: absolute;
+    background: transparent;
+    bottom: 10px;
+    padding: 2px;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+}
+
+.edgetag{
+  left: 45.6%;
+}
+.hidden{
+  position: absolute;
+  background: transparent;
+  bottom: 0px;
+  width: 23px;
+  height: 50px;
+  right: 13.25%;
+  outline: none;
+}
+.hidden:hover{
+  background:rgba(255,255,255,0.4);
+  outline: white;
+}
+
+.alert{
+  position: absolute;
+  background: transparent;
+  bottom: 0px;
+  width: 30px;
+  height: 50px;
+  right: 0.5%;
+  outline: none;
+}
+/* .edgebut:hover ~ .edgetag{
+  
+  background: rgb(255, 255, 255);
+  color:rgba(71, 70, 70, 0.884);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+} */
+
+.glow:hover{
+    color: rgb(36, 33, 33);
+    box-shadow: 0 5px 15px rgba(2, 75, 143, 0.4);
+}
+
+.startmenu img{
+    border-radius: 8px;
+}
+
+.searchmenu{
+    position: absolute; 
+    /* bottom: 50px; */
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+}
+
+.searchmenu img{
+    border-radius: 8px;
+}
+
+.screenmenu{
+    position: absolute; 
+    /* bottom: 50px; */
+    bottom: -655px;
+    width: 100%;
+    text-align: center;
+}
+
+.screenmenu img{
+    border-radius: 8px;
+}
+
+.calendarmenu{
+    position: fixed; 
+    right: -500px;
+    width: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    transition: all 0.5s ease-in;
+    height: 100%
+}
+.calendarmenu img{
+  background-size: cover;
+  height: 93.5%;
+}
+.hiddentag{
+  position: absolute;
+  bottom: 15px;
+  right: 6%;
+  padding: 0px 4px;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: smaller;
+  background-origin: border-box;
+  transition: opacity 0.05s linear;
+  box-shadow: 2px 2px 1px 0px rgb(36, 33, 33);
+  opacity:0;
+  z-index: 10;
+}
+.hidden:hover ~.hiddentag{
+  background: rgb(255, 255, 255);
+  color:rgba(71, 70, 70, 0.884);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+}
+
+.disdate{
+  position: absolute;
+  bottom: 55px;
+  right: 3%;
+  padding: 0px 4px;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: smaller;
+  background-origin: border-box;
+  transition: opacity 0.05s linear;
+  box-shadow: 2px 2px 1px 0px rgb(36, 33, 33);
+  opacity:0;
+}
+.timedate:hover ~ .disdate{
+  background: rgb(255, 255, 255);
+  color:rgba(71, 70, 70, 0.884);
+  opacity: 1;
+  transition-delay: 1s;
+  display: block;
+}
+
+.widgetclass{
+    position: absolute; 
+    /* bottom: 50px; */
+    top: 4%;
+    left: -655px;
+    width: 100%;
+    /*text-align: center;*/
+    transition: all 0.5s ease-in;
+}
+
+.caltime{
+    position: absolute;
+    top: 1%;
+    right: 41%;
+    width: 200px;
+    text-align: left;
+    text-indent: 15px;
+    background-color: #e5e5e5;
+    font-family: calibri;
+    font-size: xxx-large;
+}
+.m12{
+    position: absolute;
+    top: 9.5%;
+    right: 41%;
+    width: 200px;
+    text-align: left;
+    text-indent: 18px;
+    background-color: #e5e5e5;
+    font-family: calibri;
+    font-size: medium;
+    color: blue;
+}
+
+.timezone{
+    display: flex;
+    position: absolute; 
+    top: 4.1%;
+    right: 30.5%;
+    font-size: x-large;
+    font-family: calibri;
+    font-weight: 350;
+    color: black;
+}
+
+.vscode, .msedge {
+    position: absolute; 
+    bottom: -700px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    transition: all 0.6s ease;
+    transition-delay: 0.5s;
+}
+
+.msedge img{
+    height: 638px;
+}
+
+.hiddicon{
+  position: absolute;
+  bottom: -200px;
+  transition: bottom 0.2s ease;
+  right: 12.8%;
+}
+
+.notification{
+  position: absolute;
+  right: -600px;
+  transition: right 0.5s ease;
+  bottom: 45px;
+}
+.close{
+    display: block;
+    position: relative;
+    background: #3d3d3d;
+    color: #ada2a2;
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: large;
+    text-align: center;
+    text-indent: -3px;
+    bottom: 37.72rem;
+    padding: 3px 0px 4.5px 2px;
+    left: 72.62%;
+    width: 37px;
+    z-index: 1;
+}
+
+.close:hover{
+    background: red;
+    color:white;
+}
+
+.close1{
+    display: block;
+    position: relative;
+    background: #cecece;
+    color: black;
+    font-weight: lighter;
+    font-family: monospace;
+    font-size: large;
+    text-align: center;
+    text-indent: -3px;
+    bottom: 40.1rem;
+    padding: 3px 0px 6px 2px;
+    left: 77.1%;
+    width: 37px;
+    z-index: 1;
+}
+.close1:hover{
+    background: red;
+    color:white;
+}
+
+.right{
+    justify-self: flex-end;
+    position: absolute;
+    right: 0;
+    margin: 6px 0;
+    height: 85%;
+}  
+.icons{
+    color: white;
+}
+/* ------------------Calendar for Windows 11 ---------------------------------------*/
+.container {
+  position: absolute;
+  top: 14.3%;
+  width: 345px;
+  height: 333px;
+  background-color: #000000d4;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-origin: border-box; */
+  box-sizing: border-box;
+}
+
+.calendar {
+  width: 345px;
+  height: 333px;
+  background-color: #e5e5e5;
+}
+
+.month {
+  width: 100%;
+  height: 2rem;
+  background-color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.month i {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.prev{
+  position: absolute;
+  left: 78%;
+}
+.next{
+  position: absolute;
+  left: 92%
+}
+
+.month h1 {
+  font-size: 0.9rem;
+  font-weight: 400;
+  position: relative;
+  letter-spacing: 0.2rem;
+  left: -30px;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 2.5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(340px / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+  transition: none;
+}
+
+.days div {
+  font-size: 0.9rem;
+  font-weight: 400;
+  width: calc(270px / 7);
+  margin: 0.2rem;
+  display: flex;
+  height: calc(270px / 7);
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.days div:hover:not(.today) {
+  background-color: transparent;
+  border: 0.1rem solid #ffffff;
+  cursor: pointer;
+}
+.days div:hover {
+  border: 0.1rem solid #000000;
+  cursor: pointer;
+}
+
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #0e83e2;
+  border: 0.1rem solid #0e83e2;
+  color: white;
+}
+.not-active{
+  background-origin: border-box;
+}
+
+.selected{
+  box-shadow: inset 0px 0px 0px 2px #0e83e2;
+  box-sizing: border-box;
+  opacity: 1;
+}
+.today.selected{
+  box-shadow: inset 0px 0px 0px 2px rgb(255, 255, 255);
+  box-sizing: border-box;
+  opacity: 1;
+}
+.notselected{
+  border: 0.1rem solid transparent;
+  color: black;
+}
